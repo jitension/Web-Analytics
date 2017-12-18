@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec  5 11:53:19 2017
-
-@author: ranji
-"""
-
 from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 import logging
@@ -22,7 +15,7 @@ model0 = Word2Vec(LineSentence("C:/Users/ranji/Desktop/project 660/final/counter
 #model0['restaurant']
 list1=model0.most_similar('food', topn=10)
 print((list1[0]))
-with open("C:/Users/ranji/Desktop/project 660/final/relevant.csv","w") as result:
+with open("C:/Users/jitu/Desktop/project 660/final/relevant.csv","w") as result:
     wr = csv.writer(result,dialect="excel")
     for each in list1:
         if each:
